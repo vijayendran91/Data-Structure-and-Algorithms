@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class QueueApp
+{
+	public static void main(String args[]) throws QueueException
+	{
+		Queue queue=new Queue(7);
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the values to be enqueued");
+		for(int i=0;i<queue.queueSize();i++){
+			queue.enqueue(scan.nextInt());		
+			System.out.println("Tails Position is "+queue.tailPosition());		
+				
+		}
+		queue.printQueue();		
+		queue.dequeue();
+		queue.dequeue();
+		queue.dequeue();
+		queue.printQueue();
+
+				
+		
+	}
+
+}
